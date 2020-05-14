@@ -10,3 +10,10 @@ tests:
     template: ./templates/master.template.yaml
     regions:
     - us-west-1
+    parameters:
+      AvailabilityZones: "$[taskcat_getaz_2]"
+      EmailAddress: joshuawabulo@gmail.com
+      KeyPairName: qsworkshop.pem 
+      WebserverCIDR: "0.0.0.0/0"
+      QSS3KeyPrefix: "qs-workshop/"
+      QSS3BucketName: "$[taskcat_autobucket]"
